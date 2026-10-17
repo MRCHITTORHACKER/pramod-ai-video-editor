@@ -38,7 +38,7 @@ jobs:
         run: |
           SDKMGR=$(command -v sdkmanager || echo "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager")
           yes | "$SDKMGR" --licenses > /dev/null || true
-          "$SDKMGR" --install "platforms;android-37" "build-tools;37.0.0" "platform-tools"
+          "$SDKMGR" --install "platforms;android-36" "build-tools;36.0.0" "platform-tools"
 
       - name: Set up Gradle 9.8.0
         uses: gradle/actions/setup-gradle@v4
@@ -81,7 +81,7 @@ jobs:
         run: |
           SDKMGR=$(command -v sdkmanager || echo "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager")
           yes | "$SDKMGR" --licenses > /dev/null || true
-          "$SDKMGR" --install "platforms;android-37" "build-tools;37.0.0" "platform-tools"
+          "$SDKMGR" --install "platforms;android-36" "build-tools;36.0.0" "platform-tools"
 
       - name: Set up Gradle 9.8.0
         uses: gradle/actions/setup-gradle@v4
