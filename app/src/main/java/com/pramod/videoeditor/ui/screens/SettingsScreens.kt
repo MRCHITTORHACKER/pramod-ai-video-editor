@@ -111,9 +111,8 @@ class AiSettingsViewModel(appContext: Context) : ViewModel() {
             }
             _validating.value = provider
             setMessage(provider, "Checking key with the provider…")
-            val timedOut: Boolean
+            var timedOut = false
             val status = try {
-                timedOut = false
                 withTimeout(20_000) {
                     when (provider) {
                         AiProvider.GROQ -> groq.validateKey(trimmed)
@@ -124,7 +123,6 @@ class AiSettingsViewModel(appContext: Context) : ViewModel() {
                 timedOut = true
                 AiKeyStatus.NETWORK_ERROR
             } catch (_: Exception) {
-                timedOut = false
                 AiKeyStatus.NETWORK_ERROR
             }
             _validating.value = null

@@ -8,11 +8,11 @@ import androidx.compose.ui.unit.sp
 
 // System fonts with Devanagari support (no unlicensed font bundling).
 val AppTypography = Typography(
-    displayLarge = TextStyle(FontFamily.Default, FontWeight.Black, 40.sp),
-    headlineMedium = TextStyle(FontFamily.Default, FontWeight.Bold, 24.sp),
-    titleLarge = TextStyle(FontFamily.Default, FontWeight.Bold, 20.sp),
-    titleMedium = TextStyle(FontFamily.Default, FontWeight.SemiBold, 16.sp),
-    bodyLarge = TextStyle(FontFamily.Default, FontWeight.Normal, 16.sp),
-    bodyMedium = TextStyle(FontFamily.Default, FontWeight.Normal, 14.sp),
-    labelLarge = TextStyle(FontFamily.Default, FontWeight.Medium, 14.sp),
+    displayLarge = TextStyle(fontFamily = FontFamily.Default, fontWeight = FontWeight.Black, fontSize = 40.sp),
+    headlineMedium = TextStyle(fontFamily = FontFamily.Default, fontWeight = FontWeight.Bold, fontSize = 24.sp),
+    titleLarge = TextStyle(fontFamily = FontFamily.Default, fontWeight = FontWeight.Bold, fontSize = 20.sp),
+    titleMedium = TextStyle(fontFamily = FontFamily.Default, fontWeight = FontWeight.SemiBold, fontSize = 16.sp),
+    bodyLarge = TextStyle(fontFamily = FontFamily.Default, fontWeight = FontWeight.Normal, fontSize = 16.sp),
+    bodyMedium = TextStyle(fontFamily = FontFamily.Default, fontWeight = FontWeight.Normal, fontSize = 14.sp),
+    labelLarge = TextStyle(fontFamily = FontFamily.Default, fontWeight = FontWeight.Medium, fontSize = 14.sp),
 )
