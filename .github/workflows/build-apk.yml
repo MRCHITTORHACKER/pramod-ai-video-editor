@@ -45,6 +45,9 @@ jobs:
         with:
           gradle-version: 9.8.0
 
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
       - name: Generate SFX assets (deterministic, CC0)
         run: |
           pip install numpy scipy
@@ -100,6 +103,9 @@ jobs:
           keyAlias=$KEY_ALIAS
           keyPassword=$KEY_PASSWORD
           EOF
+
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
 
       - name: Generate SFX assets (deterministic, CC0)
         run: |
