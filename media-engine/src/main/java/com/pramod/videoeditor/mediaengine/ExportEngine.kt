@@ -129,7 +129,7 @@ class Media3ExportEngine(private val context: Context) {
 
             val composition = Composition.Builder(sequences).build()
 
-            suspendCancellableCoroutine { cont ->
+            suspendCancellableCoroutine<ExportResult> { cont ->
                 var pollJob: Job? = null
                 val listener = object : Transformer.Listener {
                     override fun onCompleted(
@@ -300,11 +300,11 @@ class Media3ExportEngine(private val context: Context) {
             return null
         }
         val mediaItemBuilder = MediaItem.Builder().setUri("asset:///${asset.fileName}")
-        if (sfx.trimOutMs > sfx.trimStartMs) {
+        if (sfx.trimEndMs > sfx.trimStartMs) {
             mediaItemBuilder.setClippingConfiguration(
                 MediaItem.ClippingConfiguration.Builder()
                     .setStartPositionMs(sfx.trimStartMs.coerceAtLeast(0L))
-                    .setEndPositionMs(sfx.trimOutMs)
+                    .setEndPositionMs(sfx.trimEndMs)
                     .build()
             )
         }

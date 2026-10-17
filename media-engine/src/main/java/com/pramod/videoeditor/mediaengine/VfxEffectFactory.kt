@@ -539,7 +539,7 @@ class TimelineAudioProcessor(
         // Emit pending delay as silence first, then the (processed) input in the
         // same output buffer — input is always fully consumed, so the pipeline
         // can never stall on an unconsumed buffer.
-        val silenceBytes = min(delayBytesRemaining, MAX_SILENCE_CHUNK_BYTES).toInt()
+        val silenceBytes = min(delayBytesRemaining, MAX_SILENCE_CHUNK_BYTES.toLong()).toInt()
         val out = replaceOutputBuffer(silenceBytes + inputBytes)
         repeat(silenceBytes) { out.put(0.toByte()) }
         delayBytesRemaining -= silenceBytes
