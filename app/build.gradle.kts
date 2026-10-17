@@ -1,3 +1,6 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.serialization)
@@ -10,9 +13,9 @@ android {
     // Release signing: wired only when keystore.properties exists next to settings.gradle.kts.
     // CI / debug builds work fine without it.
     val keystorePropsFile = rootProject.file("keystore.properties")
-    val keystoreProps = java.util.Properties()
+    val keystoreProps = Properties()
     if (keystorePropsFile.exists()) {
-        keystoreProps.load(java.io.FileInputStream(keystorePropsFile))
+        keystoreProps.load(FileInputStream(keystorePropsFile))
     }
 
     signingConfigs {
