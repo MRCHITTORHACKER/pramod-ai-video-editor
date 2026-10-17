@@ -4,7 +4,7 @@
 # SAME version.
 #
 # NOTE: KSP has no release for Kotlin 2.4.x (latest KSP is 2.3.12), so Room
-# uses KAPT here (kapt ships with the Kotlin Gradle plugin, version = kotlin).
+# KSP (standalone, version-independent) for Room annotation processing.
 [versions]
 agp = "9.4.1"
 kotlin = "2.4.20"
@@ -65,6 +65,6 @@ junit = { group = "junit", name = "junit", version.ref = "junit" }
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
-kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version = "2.3.10" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
