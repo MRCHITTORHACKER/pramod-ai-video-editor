@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.pramod.videoeditor.coremodel"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         minSdk = 26
