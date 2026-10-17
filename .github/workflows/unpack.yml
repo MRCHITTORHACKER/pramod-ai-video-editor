@@ -1,0 +1,47 @@
+name: Unpack source zip
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unpack source and commit
+        run: |
+          ZIP=pramod-ai-video-editor-complete.zip
+          if [ ! -f "$ZIP" ]; then
+            echo "No source zip found, nothing to do."
+            exit 0
+          fi
+          unzip -q -o "$ZIP"
+          if [ -d src ]; then
+            cp -r src/. ./
+            rm -rf src
+          fi
+          rm -f "$ZIP"
+          rm -f .github/workflows/unpack.yml
+          git config user.name "source-unpack"
+          git config user.email "source-unpack@local"
+          git add -A
+          if git status --porcelain | grep -q .; then
+            git commit -m "Unpack app source from zip"
+            git push
+            echo "UNPACKED=true" >> "$GITHUB_ENV"
+          else
+            echo "Nothing new to commit."
+          fi
+      - name: Trigger the real build
+        if: env.UNPACKED == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          sleep 20
+          for i in 1 2 3; do
+            gh workflow run build-apk.yml --ref main && break
+            echo "dispatch retry $i..."
+            sleep 15
+          done
