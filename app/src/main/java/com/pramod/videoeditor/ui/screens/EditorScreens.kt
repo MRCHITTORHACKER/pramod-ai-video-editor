@@ -92,7 +92,6 @@ import kotlinx.coroutines.launch
 import java.io.File
 import java.util.UUID
 import kotlin.math.abs
-import kotlin.math.maxOf
 
 /** mm:ss.d formatter for timeline timestamps shown in the editor UI. */
 private fun formatMs(ms: Long): String {

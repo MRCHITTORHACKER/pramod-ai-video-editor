@@ -7,7 +7,6 @@ import android.net.Uri
 import android.provider.OpenableColumns
 import android.webkit.MimeTypeMap
 import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.activity.result.PickVisualMedia
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
@@ -340,7 +339,7 @@ fun MediaPickerScreen(nav: NavController) {
     val notices by vm.notices.collectAsState()
     val projectName by vm.projectName.collectAsState()
 
-    val photoPickerAvailable = remember { PickVisualMedia.isPhotoPickerAvailable(context) }
+    val photoPickerAvailable = remember { ActivityResultContracts.PickVisualMedia.isPhotoPickerAvailable(context) }
     val pickVisual = rememberLauncherForActivityResult(
         ActivityResultContracts.PickMultipleVisualMedia(20)
     ) { uris: List<Uri> -> vm.addMedia(context, uris) }
@@ -364,7 +363,7 @@ fun MediaPickerScreen(nav: NavController) {
             onClick = {
                 vm.clearError()
                 if (photoPickerAvailable) {
-                    pickVisual.launch(PickVisualMediaRequest(PickVisualMedia.ImageAndVideo))
+                    pickVisual.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageAndVideo))
                 } else {
                     openDocuments.launch(arrayOf("image/*", "video/*"))
                 }
