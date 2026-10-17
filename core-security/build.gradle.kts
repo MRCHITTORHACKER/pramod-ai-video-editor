@@ -25,5 +25,4 @@ android {
 dependencies {
     // inter-module
     // module
-    implementation(libs.security.crypto)
 }
