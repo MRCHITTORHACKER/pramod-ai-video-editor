@@ -8,7 +8,6 @@ jobs:
     permissions:
       contents: write
       actions: write
-      workflows: write
     steps:
       - uses: actions/checkout@v4
       - name: Unpack source and commit
@@ -20,11 +19,11 @@ jobs:
           fi
           unzip -q -o "$ZIP"
           if [ -d src ]; then
+            rm -rf src/.github
             cp -r src/. ./
             rm -rf src
           fi
           rm -f "$ZIP"
-          rm -f .github/workflows/unpack.yml
           git config user.name "source-unpack"
           git config user.email "source-unpack@local"
           git add -A
