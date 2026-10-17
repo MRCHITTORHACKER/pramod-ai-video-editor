@@ -28,6 +28,7 @@ android {
 
 dependencies {
     // inter-module
+    implementation(project(":core-storage"))
     implementation(project(":core-model"))
     implementation(project(":core-database"))
     implementation(project(":media-engine"))
