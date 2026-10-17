@@ -9,7 +9,7 @@ plugins {
 
 android {
     namespace = "com.pramod.videoeditor"
-    compileSdk = 37
+    compileSdk = 36
 
     // Release signing: wired only when keystore.properties exists next to settings.gradle.kts.
     // CI / debug builds work fine without it.
@@ -33,7 +33,7 @@ android {
     defaultConfig {
         applicationId = "com.pramod.videoeditor"
         minSdk = 26
-        targetSdk = 37
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0.0"
     }

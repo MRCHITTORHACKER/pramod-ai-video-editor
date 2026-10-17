@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.pramod.videoeditor.featureexport"
-    compileSdk = 37
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 26
