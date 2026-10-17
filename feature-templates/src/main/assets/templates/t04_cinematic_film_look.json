@@ -1,0 +1,120 @@
+{
+  "id": "t04_cinematic_film_look",
+  "name": "Cinematic Film Look",
+  "category": "cinematic",
+  "description": "Travel/lifestyle storytelling: warm/cool grade, vignette, grain, optional letterbox.",
+  "thumbnailRef": "thumb_t04_cinematic_film_look.png",
+  "aspectRatios": [
+    "R_9_16",
+    "R_16_9",
+    "R_1_1"
+  ],
+  "minDurationSec": 10,
+  "maxDurationSec": 300,
+  "captionLayout": {
+    "position": "bottom_center",
+    "maxWordsPerCaption": 10,
+    "safeMarginPercent": 10.0,
+    "backgroundStyle": "none",
+    "backgroundOpacity": 0.0
+  },
+  "typography": {
+    "fontFamily": "serif",
+    "devanagariSupport": true,
+    "baseSizeSp": 36,
+    "textColor": "#FAF3E0",
+    "accentColor": "#D4A017",
+    "strokeColor": null,
+    "strokeWidthDp": 0.0
+  },
+  "textAnimations": [
+    {
+      "type": "fade_in",
+      "startScale": 1.0,
+      "endScale": 1.0,
+      "fadeInMs": 600,
+      "easing": "ease_in_out",
+      "overshoot": false
+    }
+  ],
+  "transitions": [
+    {
+      "type": "fade",
+      "durationMs": 600
+    }
+  ],
+  "vfx": [
+    {
+      "effectId": "color_grade",
+      "placement": "throughout",
+      "intensity": 0.5,
+      "params": {
+        "warmth": 0.6,
+        "contrast": 1.08
+      }
+    },
+    {
+      "effectId": "vignette",
+      "placement": "throughout",
+      "intensity": 0.4,
+      "params": {
+        "strength": 0.45
+      }
+    },
+    {
+      "effectId": "film_grain",
+      "placement": "throughout",
+      "intensity": 0.25,
+      "params": {
+        "amount": 0.25
+      }
+    },
+    {
+      "effectId": "letterbox",
+      "placement": "throughout",
+      "intensity": 0.5,
+      "params": {
+        "barPercent": 12.0
+      }
+    }
+  ],
+  "emojiRules": {
+    "category": "none",
+    "animation": "pop",
+    "maxPerVideo": 3,
+    "autoSuggest": false
+  },
+  "sfxRules": [
+    {
+      "onEvent": "transition",
+      "category": "soft_transition",
+      "gainDb": -10.0,
+      "enabled": true,
+      "maxOccurrences": 6
+    }
+  ],
+  "musicBehavior": {
+    "mood": "ambient",
+    "duckUnderSpeech": true,
+    "duckLevelDb": -8.0,
+    "fadeInMs": 1200,
+    "fadeOutMs": 1500
+  },
+  "timingRules": {
+    "syncSource": "speech",
+    "requireRealBeatAnalysis": true,
+    "minTextOnScreenMs": 1200,
+    "maxTextOnScreenMs": 4000
+  },
+  "effectIntensity": 0.5,
+  "previewNotes": "Grade is non-destructive; Reset restores original colors.",
+  "exportNotes": "Never crop important content without user confirmation.",
+  "deviceRequirements": "minSdk 26; low-effects mode auto-enabled on low-RAM devices",
+  "assetLicense": "Original configuration; no third-party assets bundled.",
+  "version": "1.0.0",
+  "testCases": [
+    "Reset restores original colors exactly",
+    "Letterbox does not crop faces (safe-area check)",
+    "Grain amount stays subtle"
+  ]
+}

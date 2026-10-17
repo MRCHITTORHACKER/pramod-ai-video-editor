@@ -1,0 +1,83 @@
+{
+  "id": "t17_quick_facts",
+  "name": "Quick Facts",
+  "category": "viral",
+  "description": "Fast fact cards with numbered reveals.",
+  "thumbnailRef": "thumb_t17_quick_facts.png",
+  "aspectRatios": [
+    "R_9_16"
+  ],
+  "minDurationSec": 8,
+  "maxDurationSec": 45,
+  "captionLayout": {
+    "position": "bottom_center",
+    "maxWordsPerCaption": 5,
+    "safeMarginPercent": 8.0,
+    "backgroundStyle": "none",
+    "backgroundOpacity": 0.0
+  },
+  "typography": {
+    "fontFamily": "sans_serif_bold",
+    "devanagariSupport": true,
+    "baseSizeSp": 42,
+    "textColor": "#FFFFFF",
+    "accentColor": "#69F0AE",
+    "strokeColor": "#000000",
+    "strokeWidthDp": 2.0
+  },
+  "textAnimations": [
+    {
+      "type": "slide_up",
+      "startScale": 0.88,
+      "endScale": 1.0,
+      "fadeInMs": 200,
+      "easing": "ease_out",
+      "overshoot": false
+    }
+  ],
+  "transitions": [
+    {
+      "type": "slide",
+      "durationMs": 300
+    }
+  ],
+  "vfx": [],
+  "emojiRules": {
+    "category": "none",
+    "animation": "pop",
+    "maxPerVideo": 3,
+    "autoSuggest": false
+  },
+  "sfxRules": [
+    {
+      "onEvent": "transition",
+      "category": "pop",
+      "gainDb": -8.0,
+      "enabled": true,
+      "maxOccurrences": 3
+    }
+  ],
+  "musicBehavior": {
+    "mood": "none",
+    "duckUnderSpeech": true,
+    "duckLevelDb": -10.0,
+    "fadeInMs": 800,
+    "fadeOutMs": 1200
+  },
+  "timingRules": {
+    "syncSource": "speech",
+    "requireRealBeatAnalysis": true,
+    "minTextOnScreenMs": 1200,
+    "maxTextOnScreenMs": 4000
+  },
+  "effectIntensity": 0.5,
+  "previewNotes": "Generated viral template; distinct timing/typography/transition profile.",
+  "exportNotes": "Rendered with the same timing and parameters as preview.",
+  "deviceRequirements": "minSdk 26; low-effects mode auto-enabled on low-RAM devices",
+  "assetLicense": "Original configuration; no third-party assets bundled.",
+  "version": "1.0.0",
+  "testCases": [
+    "Config parses and validates with zero errors",
+    "Distinct from sibling templates in viral"
+  ]
+}

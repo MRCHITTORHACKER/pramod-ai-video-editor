@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  FileProvider paths for sharing exported videos.
+  Exports are written by ProjectFileManager to <filesDir>/exports/<jobId>.mp4,
+  so files-path is the granting root. Used with authority
+  "<applicationId>.fileprovider".
+-->
+<paths>
+    <files-path name="exports" path="exports/" />
+</paths>

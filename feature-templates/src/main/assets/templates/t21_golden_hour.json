@@ -1,0 +1,90 @@
+{
+  "id": "t21_golden_hour",
+  "name": "Golden Hour",
+  "category": "cinematic",
+  "description": "Warm golden grade for sunset footage.",
+  "thumbnailRef": "thumb_t21_golden_hour.png",
+  "aspectRatios": [
+    "R_9_16",
+    "R_16_9",
+    "R_1_1"
+  ],
+  "minDurationSec": 10,
+  "maxDurationSec": 180,
+  "captionLayout": {
+    "position": "bottom_center",
+    "maxWordsPerCaption": 6,
+    "safeMarginPercent": 8.0,
+    "backgroundStyle": "none",
+    "backgroundOpacity": 0.0
+  },
+  "typography": {
+    "fontFamily": "sans_serif_bold",
+    "devanagariSupport": true,
+    "baseSizeSp": 42,
+    "textColor": "#FFFFFF",
+    "accentColor": "#FFB300",
+    "strokeColor": "#000000",
+    "strokeWidthDp": 2.0
+  },
+  "textAnimations": [
+    {
+      "type": "fade_in",
+      "startScale": 0.88,
+      "endScale": 1.0,
+      "fadeInMs": 200,
+      "easing": "ease_out",
+      "overshoot": false
+    }
+  ],
+  "transitions": [
+    {
+      "type": "fade",
+      "durationMs": 700
+    }
+  ],
+  "vfx": [
+    {
+      "effectId": "color_grade",
+      "placement": "throughout",
+      "intensity": 0.6,
+      "params": {}
+    },
+    {
+      "effectId": "light_leak",
+      "placement": "throughout",
+      "intensity": 0.35,
+      "params": {}
+    }
+  ],
+  "emojiRules": {
+    "category": "none",
+    "animation": "pop",
+    "maxPerVideo": 3,
+    "autoSuggest": false
+  },
+  "sfxRules": [],
+  "musicBehavior": {
+    "mood": "ambient",
+    "duckUnderSpeech": true,
+    "duckLevelDb": -10.0,
+    "fadeInMs": 800,
+    "fadeOutMs": 1200
+  },
+  "timingRules": {
+    "syncSource": "speech",
+    "requireRealBeatAnalysis": true,
+    "minTextOnScreenMs": 1200,
+    "maxTextOnScreenMs": 4000
+  },
+  "effectIntensity": 0.5,
+  "previewNotes": "Generated cinematic template; distinct timing/typography/transition profile.",
+  "exportNotes": "Rendered with the same timing and parameters as preview.",
+  "deviceRequirements": "minSdk 26; low-effects mode auto-enabled on low-RAM devices",
+  "assetLicense": "Original configuration; no third-party assets bundled.",
+  "version": "1.0.0",
+  "testCases": [
+    "Config parses and validates with zero errors",
+    "Distinct from sibling templates in cinematic"
+  ]
+}

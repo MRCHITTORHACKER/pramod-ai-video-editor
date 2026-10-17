@@ -1,0 +1,77 @@
+{
+  "id": "t56_family_moments",
+  "name": "Family Moments",
+  "category": "social",
+  "description": "Warm family compilation.",
+  "thumbnailRef": "thumb_t56_family_moments.png",
+  "aspectRatios": [
+    "R_9_16",
+    "R_16_9",
+    "R_1_1"
+  ],
+  "minDurationSec": 15,
+  "maxDurationSec": 240,
+  "captionLayout": {
+    "position": "bottom_center",
+    "maxWordsPerCaption": 6,
+    "safeMarginPercent": 8.0,
+    "backgroundStyle": "none",
+    "backgroundOpacity": 0.0
+  },
+  "typography": {
+    "fontFamily": "sans_serif_bold",
+    "devanagariSupport": true,
+    "baseSizeSp": 42,
+    "textColor": "#FFFFFF",
+    "accentColor": "#FFCC80",
+    "strokeColor": "#000000",
+    "strokeWidthDp": 2.0
+  },
+  "textAnimations": [
+    {
+      "type": "fade_in",
+      "startScale": 0.88,
+      "endScale": 1.0,
+      "fadeInMs": 200,
+      "easing": "ease_out",
+      "overshoot": false
+    }
+  ],
+  "transitions": [
+    {
+      "type": "fade",
+      "durationMs": 500
+    }
+  ],
+  "vfx": [],
+  "emojiRules": {
+    "category": "celebration",
+    "animation": "pop",
+    "maxPerVideo": 3,
+    "autoSuggest": true
+  },
+  "sfxRules": [],
+  "musicBehavior": {
+    "mood": "emotional",
+    "duckUnderSpeech": true,
+    "duckLevelDb": -10.0,
+    "fadeInMs": 800,
+    "fadeOutMs": 1200
+  },
+  "timingRules": {
+    "syncSource": "speech",
+    "requireRealBeatAnalysis": true,
+    "minTextOnScreenMs": 1200,
+    "maxTextOnScreenMs": 4000
+  },
+  "effectIntensity": 0.35,
+  "previewNotes": "Generated social template; distinct timing/typography/transition profile.",
+  "exportNotes": "Rendered with the same timing and parameters as preview.",
+  "deviceRequirements": "minSdk 26; low-effects mode auto-enabled on low-RAM devices",
+  "assetLicense": "Original configuration; no third-party assets bundled.",
+  "version": "1.0.0",
+  "testCases": [
+    "Config parses and validates with zero errors",
+    "Distinct from sibling templates in social"
+  ]
+}

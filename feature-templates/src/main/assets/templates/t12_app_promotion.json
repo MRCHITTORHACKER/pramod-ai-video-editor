@@ -1,0 +1,103 @@
+{
+  "id": "t12_app_promotion",
+  "name": "App Promotion",
+  "category": "business",
+  "description": "Promo for apps/products: user logo + name, feature titles, screenshot overlays, clean zooms.",
+  "thumbnailRef": "thumb_t12_app_promotion.png",
+  "aspectRatios": [
+    "R_9_16",
+    "R_16_9",
+    "R_1_1"
+  ],
+  "minDurationSec": 15,
+  "maxDurationSec": 120,
+  "captionLayout": {
+    "position": "bottom_center",
+    "maxWordsPerCaption": 8,
+    "safeMarginPercent": 10.0,
+    "backgroundStyle": "pill",
+    "backgroundOpacity": 0.5
+  },
+  "typography": {
+    "fontFamily": "sans_serif_bold",
+    "devanagariSupport": true,
+    "baseSizeSp": 42,
+    "textColor": "#FFFFFF",
+    "accentColor": "#40C4FF",
+    "strokeColor": "#000000",
+    "strokeWidthDp": 2.0
+  },
+  "textAnimations": [
+    {
+      "type": "slide_up",
+      "startScale": 1.0,
+      "endScale": 1.0,
+      "fadeInMs": 300,
+      "easing": "ease_out",
+      "overshoot": false
+    }
+  ],
+  "transitions": [
+    {
+      "type": "slide",
+      "durationMs": 350
+    }
+  ],
+  "vfx": [
+    {
+      "effectId": "smooth_zoom",
+      "placement": "emphasis",
+      "intensity": 0.5,
+      "params": {
+        "zoomFrom": 1.0,
+        "zoomTo": 1.15
+      }
+    }
+  ],
+  "emojiRules": {
+    "category": "none",
+    "animation": "pop",
+    "maxPerVideo": 3,
+    "autoSuggest": false
+  },
+  "sfxRules": [
+    {
+      "onEvent": "transition",
+      "category": "whoosh",
+      "gainDb": -10.0,
+      "enabled": true,
+      "maxOccurrences": 6
+    },
+    {
+      "onEvent": "feature_reveal",
+      "category": "notification",
+      "gainDb": -8.0,
+      "enabled": true,
+      "maxOccurrences": 4
+    }
+  ],
+  "musicBehavior": {
+    "mood": "energetic",
+    "duckUnderSpeech": true,
+    "duckLevelDb": -12.0,
+    "fadeInMs": 800,
+    "fadeOutMs": 1000
+  },
+  "timingRules": {
+    "syncSource": "speech",
+    "requireRealBeatAnalysis": true,
+    "minTextOnScreenMs": 1200,
+    "maxTextOnScreenMs": 4000
+  },
+  "effectIntensity": 0.5,
+  "previewNotes": "All claims/pricing are user-provided; never fabricate reviews or download counts.",
+  "exportNotes": "Speech ducking on background music during voiceover.",
+  "deviceRequirements": "minSdk 26; low-effects mode auto-enabled on low-RAM devices",
+  "assetLicense": "Original configuration; no third-party assets bundled.",
+  "version": "1.0.0",
+  "testCases": [
+    "No fabricated reviews/downloads shown",
+    "Logo + app name editable",
+    "Music ducks under voiceover"
+  ]
+}

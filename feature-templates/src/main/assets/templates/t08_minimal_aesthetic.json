@@ -1,0 +1,85 @@
+{
+  "id": "t08_minimal_aesthetic",
+  "name": "Minimal Aesthetic",
+  "category": "social",
+  "description": "Lifestyle/quotes: minimal text, gentle fades, soft colors, generous margins.",
+  "thumbnailRef": "thumb_t08_minimal_aesthetic.png",
+  "aspectRatios": [
+    "R_9_16"
+  ],
+  "minDurationSec": 8,
+  "maxDurationSec": 90,
+  "captionLayout": {
+    "position": "center",
+    "maxWordsPerCaption": 8,
+    "safeMarginPercent": 14.0,
+    "backgroundStyle": "none",
+    "backgroundOpacity": 0.0
+  },
+  "typography": {
+    "fontFamily": "serif",
+    "devanagariSupport": true,
+    "baseSizeSp": 38,
+    "textColor": "#F8F6F0",
+    "accentColor": "#B39DDB",
+    "strokeColor": null,
+    "strokeWidthDp": 0.0
+  },
+  "textAnimations": [
+    {
+      "type": "fade_in",
+      "startScale": 1.0,
+      "endScale": 1.0,
+      "fadeInMs": 800,
+      "easing": "ease_in_out",
+      "overshoot": false
+    }
+  ],
+  "transitions": [
+    {
+      "type": "fade",
+      "durationMs": 800
+    }
+  ],
+  "vfx": [
+    {
+      "effectId": "film_grain",
+      "placement": "throughout",
+      "intensity": 0.15,
+      "params": {
+        "amount": 0.15
+      }
+    }
+  ],
+  "emojiRules": {
+    "category": "none",
+    "animation": "pop",
+    "maxPerVideo": 3,
+    "autoSuggest": false
+  },
+  "sfxRules": [],
+  "musicBehavior": {
+    "mood": "ambient",
+    "duckUnderSpeech": true,
+    "duckLevelDb": -8.0,
+    "fadeInMs": 1500,
+    "fadeOutMs": 1500
+  },
+  "timingRules": {
+    "syncSource": "speech",
+    "requireRealBeatAnalysis": true,
+    "minTextOnScreenMs": 1200,
+    "maxTextOnScreenMs": 4000
+  },
+  "effectIntensity": 0.2,
+  "previewNotes": "Low clutter; no mandatory SFX.",
+  "exportNotes": "Restrained music only.",
+  "deviceRequirements": "minSdk 26; low-effects mode auto-enabled on low-RAM devices",
+  "assetLicense": "Original configuration; no third-party assets bundled.",
+  "version": "1.0.0",
+  "testCases": [
+    "Text count per screen <= 12 words",
+    "No SFX placed by default",
+    "Safe margins >= 12%"
+  ]
+}
